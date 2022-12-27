@@ -7,11 +7,6 @@ edition = "2018"
 [features]
 unstable = []
 
-[dependencies.pdf]
-git = "https://github.com/pdf-rs/pdf"
-default-features=false 
-features = ["dump"]
-
 [dependencies.pdf_render]
 path = "../render"
 
@@ -32,6 +27,7 @@ font = { git = "https://github.com/pdf-rs/font" }
 pdf_encoding = "0.1"
 itertools = "*"
 image = "0.24.2"
+pdf = {version = "0.8", default-features=false, features=["dump"]}
 
 [dev-dependencies]
 criterion = "0.3"

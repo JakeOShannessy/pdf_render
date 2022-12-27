@@ -11,10 +11,6 @@ unstable = []
 name = "render"
 harness = false
 
-[dependencies.pdf]
-default-features=false 
-git = "https://github.com/pdf-rs/pdf"
-
 [dependencies]
 pathfinder_renderer = { git = "https://github.com/servo/pathfinder" }
 pathfinder_color = { git = "https://github.com/servo/pathfinder" }
@@ -32,6 +28,7 @@ globalcache = { git = "https://github.com/s3bk/cachelib", features = ["sync"] }
 istring = { git = "https://github.com/s3bk/istring" }
 once_cell = "*"
 serde_json = "*"
+pdf = {version = "0.8", default-features=false}
 
 [dev-dependencies]
 criterion = "0.3"
